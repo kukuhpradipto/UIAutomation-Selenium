@@ -1,0 +1,90 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3189944119,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Normal login",
+        "description": "",
+        "id": "login;normal-login",
+        "after": [
+          {
+            "result": {
+              "duration": 110256174,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 268712169,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Verify username field",
+            "match": {
+              "location": "LoginSteps.verifyLoginUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 456830043,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 7,
+                "value": "#    And verify password field"
+              }
+            ],
+            "line": 8,
+            "name": "User input Name Account \"kukuhpradipto_\" and Password \"Kukuh04021998\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "kukuhpradipto_",
+                  "offset": 25
+                },
+                {
+                  "val": "Kukuh04021998",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginSteps.inputAccound(String,String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "As a user I want to login website instagram",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "features/Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      }
+    ]
+  }
+]
