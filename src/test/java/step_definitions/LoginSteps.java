@@ -1,6 +1,5 @@
 package step_definitions;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
@@ -22,17 +21,9 @@ public class LoginSteps {
         loginPage.setPassword(password);
         loginPage.setLogin();
     }
-    @Given("Verify username field")
-    public void verifyLoginUser(){
-        LoginPage loginPage = new LoginPage(webDriver);
-        Assert.assertTrue(loginPage.verifyLoginUser());
-    }
-
-//    @And("verify password field")
-//    public void verifyLoginPassword(){
+//    @Given("Verify username field")
+//    public void verifyLoginUser(){
 //        LoginPage loginPage = new LoginPage(webDriver);
-//        Assert.assertTrue(loginPage.verifyLoginPassword());
+//        Assert.assertTrue(loginPage.verifyLoginUser());
 //    }
-
-
 }

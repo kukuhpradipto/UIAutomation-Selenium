@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="step_definitions.RunCukesTest" time="0.113" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="step_definitions.RunCukesTest" time="5.119" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.8.0_361/jre/lib/amd64"/>
@@ -62,7 +62,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Normal login" name="Given Verify username field" time="0.001"/>
-  <testcase classname="Scenario: Normal login" name="When User input Name Account &quot;kukuhpradipto_&quot; and Password &quot;Kukuh04021998&quot;" time="0"/>
-  <testcase classname="Scenario: Normal login" name="Scenario: Normal login" time="0.112"/>
+  <testcase classname="| kukuh_pradipto@yahoo.co.id | 04021998KUKUH |" name="When User input Name Account &quot;kukuh_pradipto@yahoo.co.id&gt;&quot; and Password &quot;04021998KUKUH&quot;" time="0.002"/>
+  <testcase classname="| kukuh_pradipto@yahoo.co.id | 04021998KUKUH |" name="Then User already on Home page" time="0"/>
+  <testcase classname="| kukuh_pradipto@yahoo.co.id | 04021998KUKUH |" name="| kukuh_pradipto@yahoo.co.id | 04021998KUKUH |" time="5.117"/>
 </testsuite>

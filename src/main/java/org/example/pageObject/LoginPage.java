@@ -13,21 +13,21 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    @FindBy(name = "username")
+    @FindBy(xpath = "//input[@id='email']")
     private WebElement nameUser;
 
-    @FindBy(name = "password")
+    @FindBy(xpath = "//input[@id='pass']")
     private WebElement password;
 
-    @FindBy(xpath = "//button[@class='_acan _acap _acas _aj1-']")
+    @FindBy(xpath = "//button[@name='login']")
     private WebElement login;
 
 
-    public boolean verifyLoginUser(){
-        nameUser.isDisplayed();
-        password.isDisplayed();
-        return true;
-    }
+//    public boolean verifyLoginUser(){
+//        nameUser.isDisplayed();
+//        password.isDisplayed();
+//        return true;
+//    }
 
     public void setNameUser(String name){
         nameUser.sendKeys(name);

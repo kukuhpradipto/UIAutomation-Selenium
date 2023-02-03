@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3189944119,
+              "duration": 3143234461,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 5,
+        "line": 13,
         "name": "Normal login",
         "description": "",
-        "id": "login;normal-login",
+        "id": "login;normal-login;;2",
         "after": [
           {
             "result": {
-              "duration": 110256174,
+              "duration": 5111671766,
               "status": "passed"
             },
             "match": {
@@ -30,47 +30,61 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 268712169,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Verify username field",
-            "match": {
-              "location": "LoginSteps.verifyLoginUser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 456830043,
+              "duration": 419772367,
               "status": "passed"
             },
             "comments": [
+              {
+                "line": 6,
+                "value": "#    Given Verify username field"
+              },
               {
                 "line": 7,
                 "value": "#    And verify password field"
               }
             ],
             "line": 8,
-            "name": "User input Name Account \"kukuhpradipto_\" and Password \"Kukuh04021998\"",
+            "name": "User input Name Account \"kukuh_pradipto@yahoo.co.id\u003e\" and Password \"04021998KUKUH\"",
             "match": {
               "arguments": [
                 {
-                  "val": "kukuhpradipto_",
+                  "val": "kukuh_pradipto@yahoo.co.id\u003e",
                   "offset": 25
                 },
                 {
-                  "val": "Kukuh04021998",
-                  "offset": 55
+                  "val": "04021998KUKUH",
+                  "offset": 68
                 }
               ],
               "location": "LoginSteps.inputAccound(String,String)"
             },
+            "matchedColumns": [
+              0,
+              1
+            ],
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5155045331,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User already on Home page",
+            "match": {
+              "location": "HomeSteps.verifyHome()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Login"
           }
         ]
       }
