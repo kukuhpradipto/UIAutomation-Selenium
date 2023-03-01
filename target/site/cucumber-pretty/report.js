@@ -1,138 +1,351 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Handphone/Complete.feature");
 formatter.feature({
-  "line": 2,
-  "name": "Login",
-  "description": "As a user I want to login website instagram",
-  "id": "login",
+  "line": 3,
+  "name": "Completed order",
+  "description": "As a user I want to completed buy product",
+  "id": "completed-order",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@Login"
+      "name": "@Complete"
     }
   ]
 });
 formatter.scenarioOutline({
-  "line": 5,
-  "name": "Normal login",
+  "line": 6,
+  "name": "user completed order product",
   "description": "",
-  "id": "login;normal-login",
+  "id": "completed-order;user-completed-order-product",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 6,
-      "value": "#    Given Verify username field"
-    },
-    {
-      "line": 7,
-      "value": "#    And verify password field"
-    }
-  ],
+  "line": 7,
+  "name": "User open the website sauce demo",
+  "keyword": "Given "
+});
+formatter.step({
   "line": 8,
-  "name": "User input Name Account \"\u003cemail\u003e\u003e\" and Password \"\u003cpassword\u003e\"",
+  "name": "User input \"standard_user\" as userName and Input \"secret_sauce\" as password",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "User already on Home page",
+  "name": "User already on landing page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 10,
+  "name": "User choose product list by \"\u003cprodukList\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 11,
+  "name": "User choice 2 product from the list \"\u003cproduk\u003e\" and \"\u003cprodukk\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "User click on icon cart to verify product",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 13,
+  "name": "User delete product \"\u003cdeleteProduct\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "User click button checkout",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "User input Check Out Form in Firs Name \"\u003cfirstName\u003e\", Last Name \"\u003clastName\u003e\" and Partial Code \"\u003cpartialCode\u003e\".",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 16,
+  "name": "User verify nominal taxt",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "User verify Summary total Checkout",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "User click button finish",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "User complete order",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 11,
+  "line": 21,
   "name": "",
   "description": "",
-  "id": "login;normal-login;",
+  "id": "completed-order;user-completed-order-product;",
   "rows": [
     {
       "cells": [
-        "email",
-        "password"
+        "produk",
+        "produkk",
+        "deleteProduct",
+        "produkList",
+        "firstName",
+        "lastName",
+        "partialCode"
       ],
-      "line": 12,
-      "id": "login;normal-login;;1"
+      "line": 22,
+      "id": "completed-order;user-completed-order-product;;1"
     },
     {
       "cells": [
-        "kukuh_pradipto@yahoo.co.id",
-        "04021998KUKUH"
+        "Sauce Labs Onesie",
+        "Test.allTheThings() T-Shirt (Red)",
+        "Test.allTheThings() T-Shirt (Red)",
+        "Price (low to high)",
+        "kukuh",
+        "pradipto",
+        "12345"
       ],
-      "line": 13,
-      "id": "login;normal-login;;2"
+      "line": 23,
+      "id": "completed-order;user-completed-order-product;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 3143234461,
+  "duration": 2760517558,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
-  "name": "Normal login",
+  "line": 23,
+  "name": "user completed order product",
   "description": "",
-  "id": "login;normal-login;;2",
+  "id": "completed-order;user-completed-order-product;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@Login"
+      "name": "@Complete"
     }
   ]
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 6,
-      "value": "#    Given Verify username field"
-    },
-    {
-      "line": 7,
-      "value": "#    And verify password field"
-    }
-  ],
+  "line": 7,
+  "name": "User open the website sauce demo",
+  "keyword": "Given "
+});
+formatter.step({
   "line": 8,
-  "name": "User input Name Account \"kukuh_pradipto@yahoo.co.id\u003e\" and Password \"04021998KUKUH\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "User input \"standard_user\" as userName and Input \"secret_sauce\" as password",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "User already on Home page",
+  "name": "User already on landing page",
   "keyword": "Then "
+});
+formatter.step({
+  "line": 10,
+  "name": "User choose product list by \"Price (low to high)\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 11,
+  "name": "User choice 2 product from the list \"Sauce Labs Onesie\" and \"Test.allTheThings() T-Shirt (Red)\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "User click on icon cart to verify product",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 13,
+  "name": "User delete product \"Test.allTheThings() T-Shirt (Red)\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "User click button checkout",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "User input Check Out Form in Firs Name \"kukuh\", Last Name \"pradipto\" and Partial Code \"12345\".",
+  "matchedColumns": [
+    4,
+    5,
+    6
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 16,
+  "name": "User verify nominal taxt",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "User verify Summary total Checkout",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "User click button finish",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "User complete order",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginSteps.verifyLogin()"
+});
+formatter.result({
+  "duration": 723238236,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "kukuh_pradipto@yahoo.co.id\u003e",
-      "offset": 25
+      "val": "standard_user",
+      "offset": 12
     },
     {
-      "val": "04021998KUKUH",
-      "offset": 68
+      "val": "secret_sauce",
+      "offset": 50
     }
   ],
-  "location": "LoginSteps.inputAccound(String,String)"
+  "location": "LoginSteps.inputCredential(String,String)"
 });
 formatter.result({
-  "duration": 419772367,
+  "duration": 1673708239,
   "status": "passed"
 });
 formatter.match({
-  "location": "HomeSteps.verifyHome()"
+  "location": "PurchaseSteps.verifyLandingPage()"
 });
 formatter.result({
-  "duration": 5155045331,
+  "duration": 36505801,
   "status": "passed"
 });
+formatter.match({
+  "arguments": [
+    {
+      "val": "Price (low to high)",
+      "offset": 29
+    }
+  ],
+  "location": "PurchaseSteps.sortProductValue(String)"
+});
+formatter.result({
+  "duration": 5079150994,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.choiceBasket()"
+});
+formatter.result({
+  "duration": 1088847178,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.clickIconsCart()"
+});
+formatter.result({
+  "duration": 1057240263,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Test.allTheThings() T-Shirt (Red)",
+      "offset": 21
+    }
+  ],
+  "location": "CheckoutStep.deleteProduct(String)"
+});
+formatter.result({
+  "duration": 1047337891,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CheckoutStep.clickOnCheckOut()"
+});
+formatter.result({
+  "duration": 1062153376,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "kukuh",
+      "offset": 40
+    },
+    {
+      "val": "pradipto",
+      "offset": 59
+    },
+    {
+      "val": "12345",
+      "offset": 87
+    }
+  ],
+  "location": "CheckoutStep.input(String,String,String)"
+});
+formatter.result({
+  "duration": 290900294,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CheckoutStep.verifyNominalTax()"
+});
+formatter.result({
+  "duration": 53248691,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CheckoutStep.verifyNominalTotal()"
+});
+formatter.result({
+  "duration": 40070736,
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class\u003d\u0027summary_total_label\u0027]\"}\n  (Session info: chrome\u003d110.0.5481.177)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.1.2\u0027, revision: \u00279a5a329c5a\u0027\nSystem info: host: \u0027user\u0027, ip: \u0027192.168.1.71\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.15.0-60-generic\u0027, java.version: \u00271.8.0_361\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [99d87aa3a2c0ed108a63ed174f23bdca, findElement {using\u003dxpath, value\u003d//div[@class\u003d\u0027summary_total_label\u0027]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.WkDBmc}, goog:chromeOptions: {debuggerAddress: localhost:43333}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:43333/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 99d87aa3a2c0ed108a63ed174f23bdca\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)\n\tat com.sun.proxy.$Proxy21.getText(Unknown Source)\n\tat pageObject.CheckOutPage.nominalTotal(CheckOutPage.java:63)\n\tat step_definitions.Handphone.CheckoutStep.verifyNominalTotal(CheckoutStep.java:67)\n\tat ✽.And User verify Summary total Checkout(features/Handphone/Complete.feature:17)\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "CheckoutStep.clickOnBtnFinish()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "CheckoutStep.verifyOnCheckOutCompletePage()"
+});
+formatter.result({
+  "status": "skipped"
+});
 formatter.after({
-  "duration": 5111671766,
+  "duration": 109398446,
   "status": "passed"
 });
 });
