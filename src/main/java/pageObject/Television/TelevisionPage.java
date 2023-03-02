@@ -1,9 +1,12 @@
 package pageObject.Television;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.security.PublicKey;
 
 public class TelevisionPage {
 
@@ -72,16 +75,35 @@ public class TelevisionPage {
         productKedua.click();
     }
 
-//    @FindBy(xpath = "//form[@id='attach-view-cart-button-form']")
-//    private WebElement closeItem;
-//    public void setCloseItem(){
-//        closeItem.click();
-//    }
-//
-//    @FindBy(xpath = "//span[@class='nav-cart-icon nav-sprite']")
-//    private WebElement iconCart;
-//    public void setIconCart(){
-//        iconCart.click();
-//    }
+    @FindBy(xpath = "//div[@class='a-section a-spacing-mini sc-list-body sc-java-remote-feature']/div[4]//span[@class='a-size-small sc-action-delete']//input[@class='a-color-link']")
+    private WebElement deleteProduct;
+    public void setDeleteProduct(){
+        deleteProduct.click();
+    }
+
+    @FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
+    private WebElement buttonProccesToCheckout;
+    public void setButtonProccesToCheckout(){
+        buttonProccesToCheckout.click();
+    }
+
+    @FindBy(xpath = "//input[@id='ap_email']")
+    private WebElement inputName;
+    public void setInputName(String userName){
+        inputName.sendKeys(userName);
+    }
+
+    @FindBy(xpath = "//input[@id='continue']")
+    private WebElement buttonContinue;
+    public void setButtonContinue(){
+        buttonContinue.click();
+    }
+
+    @FindBy(xpath = "//span[@class='a-list-item']")
+    private WebElement errorMessage;
+    public String setErrorMessage(){
+        return errorMessage.getText();
+    }
+
 
 }

@@ -10,7 +10,7 @@
 #    As a User, I want to click button Check out Amazon Cart, So that appear sign in
 #    As I User, I want to input random username, So that appear error message
 
-    @Television
+    @Television @Team
     Scenario: Purchase using the Amazon web in Hamburger Button All Feature Electronics to sub menu Television & Video
       Given User already on Home page website amazon
       When User click Hamburger Button All
@@ -28,4 +28,8 @@
       When User choose television SAMSUNG M5
       Then User click button Add to Cart
       And User click on Button Cart
-#      And User click on Icon Cart
+      And User Delete one product
+      And User click On button Process to Checkout
+      When User input username "Abogoboga"
+      And User click on Button continue
+      Then Appear error message "We cannot find an account with that email address"

@@ -97,18 +97,41 @@ public class TelevisionStepdefs {
         a = new WebDriverWait(webDriver, 5).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='attach-sidesheet-view-cart-button']//input[@class='a-button-input']")));
         a.click();
     }
-//    public void userClickOnCloseItem() throws InterruptedException {
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setCloseItem();
-//        Thread.sleep(1000);
-//    }
 
-//    @And("User click on Icon Cart")
-//    public void userClickOnIconCart() throws InterruptedException {
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setCloseItem();
-//        Thread.sleep(1000);
-//    }
+    @And("User Delete one product")
+    public void userDeleteOneProduct() throws InterruptedException {
+        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+        televisionPage.setDeleteProduct();
+        Thread.sleep(1000);
+    }
+
+    @And("User click On button Process to Checkout")
+    public void userClickOnButtonProcessToCheckout() throws InterruptedException {
+        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+        televisionPage.setButtonProccesToCheckout();
+        Thread.sleep(1000);
+    }
+
+    @When("User input username \"(.*)\"")
+    public void userInputRandomUsername(String userName) throws InterruptedException {
+        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+        televisionPage.setInputName(userName);
+        Thread.sleep(1000);
+    }
+
+    @And("User click on Button continue")
+    public void userClickOnButtonContinue() throws InterruptedException {
+        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+        televisionPage.setButtonContinue();
+        Thread.sleep(1000);
+    }
+
+    @Then("Appear error message \"(.*)\"")
+    public void appearErrorMessage(String error) throws InterruptedException {
+        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+        Assert.assertEquals(error, televisionPage.setErrorMessage());
+        Thread.sleep(1000);
+    }
 
 
 }
