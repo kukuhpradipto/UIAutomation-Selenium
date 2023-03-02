@@ -72,10 +72,16 @@ public class TelevisionPage {
         productKedua.click();
     }
 
-    @FindBy(xpath = "//span[@class='nav-cart-icon nav-sprite']")
-    private WebElement iconCart;
-    public void setIconCart(){
-        iconCart.click();
-    }
+//    @FindBy(xpath = "//form[@id='attach-view-cart-button-form']")
+//    private WebElement closeItem;
+//    public void setCloseItem(){
+//        closeItem.click();
+//    }
+//
+//    @FindBy(xpath = "//span[@class='nav-cart-icon nav-sprite']")
+//    private WebElement iconCart;
+//    public void setIconCart(){
+//        iconCart.click();
+//    }
 
 }

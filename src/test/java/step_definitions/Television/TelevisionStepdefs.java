@@ -1,13 +1,16 @@
 package step_definitions.Television;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObject.Television.TelevisionPage;
 import step_definitions.Hooks;
 
@@ -88,10 +91,24 @@ public class TelevisionStepdefs {
         Thread.sleep(1000);
     }
 
-    @And("User click on Icon Cart")
-    public void userClickOnIconCart() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setIconCart();
-        Thread.sleep(1000);
+    @And("User click on Button Cart")
+    public void userClickCart(){
+        WebElement a;
+        a = new WebDriverWait(webDriver, 5).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='attach-sidesheet-view-cart-button']//input[@class='a-button-input']")));
+        a.click();
     }
+//    public void userClickOnCloseItem() throws InterruptedException {
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setCloseItem();
+//        Thread.sleep(1000);
+//    }
+
+//    @And("User click on Icon Cart")
+//    public void userClickOnIconCart() throws InterruptedException {
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setCloseItem();
+//        Thread.sleep(1000);
+//    }
+
+
 }

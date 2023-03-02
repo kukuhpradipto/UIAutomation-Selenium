@@ -27,4 +27,5 @@
       And User click on branch Samsung
       When User choose television SAMSUNG M5
       Then User click button Add to Cart
-      And User click on Icon Cart
+      And User click on Button Cart
+#      And User click on Icon Cart
