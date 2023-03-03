@@ -47,8 +47,6 @@ public class TelevisionStepdefs {
     public void userClickOnListItemTelevision(String hamburgerListItem) throws InterruptedException {
         WebElement a = webDriver.findElement(By.xpath("//a[text()='"+hamburgerListItem+"']"));
         a.click();
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setHamburgerListItem();
         Thread.sleep(1000);
     }
 
@@ -56,8 +54,6 @@ public class TelevisionStepdefs {
     public void userClickOnTelevisionListItem(String listItem) throws InterruptedException {
         WebElement a = webDriver.findElement(By.xpath("//span[text()='"+listItem+"']"));
         a.click();
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setListItem();
         Thread.sleep(1000);
     }
 
@@ -66,33 +62,24 @@ public class TelevisionStepdefs {
     public void userClickOnBranchSamsung(String branch) throws InterruptedException {
         WebElement a = webDriver.findElement(By.xpath("//span[text()='"+branch+"']"));
         a.click();
-
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setBranch();
         Thread.sleep(1000);
     }
 
     @When("User choose television \"(.*)\"")
     public void UserChooseTelevesionPertama(String productPertama) throws InterruptedException {
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         Thread.sleep(1000);
         js.executeScript("window.scrollBy(0,1300)", "");
         Thread.sleep(1000);
         WebElement a = webDriver.findElement(By.xpath("//span[text()='"+productPertama+"']"));
         a.click();
-//        televisionPage.setProductPertama();
         Thread.sleep(1000);
     }
 
     @When("User choose one more television \"(.*)\"")
     public void UserChooseTelevesionKedua(String productKedua) throws InterruptedException {
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-//        js.executeScript("window.scrollBy(0,1300)", "");
         WebElement a = webDriver.findElement(By.xpath("//span[text()='"+productKedua+"']"));
         a.click();
-//        televisionPage.setProductPertama();
         Thread.sleep(1000);
     }
 
@@ -101,14 +88,6 @@ public class TelevisionStepdefs {
     public void userClickButtonAddToCart() throws InterruptedException {
         TelevisionPage televisionPage = new TelevisionPage(webDriver);
         televisionPage.setAddToCartButton();
-        Thread.sleep(1000);
-    }
-
-
-    @When("User choose television SAMSUNG M5")
-    public void userChooseTelevisionSAMSUNGM() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setProductKedua();
         Thread.sleep(1000);
     }
 
@@ -124,9 +103,6 @@ public class TelevisionStepdefs {
     public void userDeleteOneProduct(String deleteProduct) throws InterruptedException {
         WebElement a = webDriver.findElement(By.cssSelector("[aria-label='Delete "+deleteProduct+"']"));
         a.click();
-
-//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-//        televisionPage.setDeleteProduct();
         Thread.sleep(1000);
     }
 
