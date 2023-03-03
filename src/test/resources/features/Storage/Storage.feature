@@ -9,7 +9,7 @@ Feature: Completed order
     And User click list menu "Data Storage" in category computers
     And User sort list product Data Storage by featured brands "Seagate"
     And User choice to cart product random from Storage Data
-#      Then User click on icon cart
-#      And User delete product "deleteProduct"
-#      And User click button procced to checkout
-#      Then User is directed to the login page and must login for the next process
+    And User click on icon cart
+    And User delete one product
+    And User click button procced to checkout
+#     Then User is directed to the login page and must login for the next process

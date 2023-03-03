@@ -72,7 +72,25 @@ public class PurchaseSteps {
         WebElement c = webDriver.findElement(By.xpath("//span[text()='Seagate Exos X16 14TB 7200 RPM SATA 6Gb/s 256MB Cache 3.5-Inch Internal Data Center HDD Enterprise Hard Drive (ST14000NM001G)']"));
         c.click();
         storageFeature.setAddCart();
+    }
 
+    @And("User click on icon cart")
+    public void userClickOnIconCart() throws Throwable {
+        StorageFeature storageFeature = new StorageFeature(webDriver);
+        storageFeature.setClickCartA();
+        Thread.sleep(1000);
+    }
 
+    @And("User delete one product")
+    public void userDeleteProduct() {
+        WebElement a = webDriver.findElement(By.cssSelector("[aria-label='Delete Seagate FireCuda 530 1TB Solid State Drive - M.2 PCIe Gen4 &Atilde;&mdash;4 NVMe 1.4, PS5 Internal SSD, speeds up to 7300MB/s, 3D TLC NAND, 1275 TBW, 1.8M MTBF, Heatsink, Rescue Services (ZP1000GM3A023)']"));
+        a.click();
+    }
+
+    @And("User click button procced to checkout")
+    public void userClickButtonProccedToCheckout() throws InterruptedException {
+        StorageFeature storageFeature = new StorageFeature(webDriver);
+        storageFeature.setButtonProccedToCheckout();
+        Thread.sleep(3000);
     }
 }
