@@ -36,45 +36,66 @@ public class TelevisionStepdefs {
         Thread.sleep(1000);
     }
 
-    @And("User click on Electronics on Hamburger Menu Item")
-    public void userClickTelevisionAndVideoHamburgerItem() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setHamburgerMenuItem();
+    @And("User click on \"(.*)\" on Hamburger Menu Item")
+    public void userClickTelevisionAndVideoHamburgerItem(String hamburgerMenuItem) throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//div[text()='"+hamburgerMenuItem+"']/parent::a[@class='hmenu-item']"));
+        a.click();
         Thread.sleep(1000);
     }
 
-    @Then("User click on Television and Video list item")
-    public void userClickOnListItemTelevision() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setHamburgerListItem();
+    @Then("User click on \"(.*)\" list item")
+    public void userClickOnListItemTelevision(String hamburgerListItem) throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//a[text()='"+hamburgerListItem+"']"));
+        a.click();
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setHamburgerListItem();
         Thread.sleep(1000);
     }
 
-    @And("USer click on Television list item")
-    public void userClickOnTelevisionListItem() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setListItem();
+    @And("USer click on \"(.*)\" list item")
+    public void userClickOnTelevisionListItem(String listItem) throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//span[text()='"+listItem+"']"));
+        a.click();
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setListItem();
         Thread.sleep(1000);
     }
 
 
-    @And("User click on branch Samsung")
-    public void userClickOnBranchSamsung() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setBranch();
+    @And("User click on branch \"(.*)\"")
+    public void userClickOnBranchSamsung(String branch) throws InterruptedException {
+        WebElement a = webDriver.findElement(By.xpath("//span[text()='"+branch+"']"));
+        a.click();
+
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setBranch();
         Thread.sleep(1000);
     }
 
-    @When("User choose television SAMSUNG 32")
-    public void UserChooseTelevesionPertama() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+    @When("User choose television \"(.*)\"")
+    public void UserChooseTelevesionPertama(String productPertama) throws InterruptedException {
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         Thread.sleep(1000);
         js.executeScript("window.scrollBy(0,1300)", "");
         Thread.sleep(1000);
-        televisionPage.setProductPertama();
+        WebElement a = webDriver.findElement(By.xpath("//span[text()='"+productPertama+"']"));
+        a.click();
+//        televisionPage.setProductPertama();
         Thread.sleep(1000);
     }
+
+    @When("User choose one more television \"(.*)\"")
+    public void UserChooseTelevesionKedua(String productKedua) throws InterruptedException {
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+//        js.executeScript("window.scrollBy(0,1300)", "");
+        WebElement a = webDriver.findElement(By.xpath("//span[text()='"+productKedua+"']"));
+        a.click();
+//        televisionPage.setProductPertama();
+        Thread.sleep(1000);
+    }
+
 
     @Then("User click button Add to Cart")
     public void userClickButtonAddToCart() throws InterruptedException {
@@ -92,16 +113,20 @@ public class TelevisionStepdefs {
     }
 
     @And("User click on Button Cart")
-    public void userClickCart(){
+    public void userClickCart() throws InterruptedException {
         WebElement a;
         a = new WebDriverWait(webDriver, 5).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='attach-sidesheet-view-cart-button']//input[@class='a-button-input']")));
         a.click();
+        Thread.sleep(1000);
     }
 
-    @And("User Delete one product")
-    public void userDeleteOneProduct() throws InterruptedException {
-        TelevisionPage televisionPage = new TelevisionPage(webDriver);
-        televisionPage.setDeleteProduct();
+    @And("User Delete one product \"(.*)\"")
+    public void userDeleteOneProduct(String deleteProduct) throws InterruptedException {
+        WebElement a = webDriver.findElement(By.cssSelector("[aria-label='Delete "+deleteProduct+"']"));
+        a.click();
+
+//        TelevisionPage televisionPage = new TelevisionPage(webDriver);
+//        televisionPage.setDeleteProduct();
         Thread.sleep(1000);
     }
 

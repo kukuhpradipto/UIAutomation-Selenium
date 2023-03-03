@@ -11,25 +11,29 @@
 #    As I User, I want to input random username, So that appear error message
 
     @Television @Team
-    Scenario: Purchase using the Amazon web in Hamburger Button All Feature Electronics to sub menu Television & Video
+    Scenario Outline: Purchase using the Amazon web in Hamburger Button All Feature Electronics to sub menu Television & Video
       Given User already on Home page website amazon
       When User click Hamburger Button All
-      And  User click on Electronics on Hamburger Menu Item
-      Then User click on Television and Video list item
-      And USer click on Television list item
-      And User click on branch Samsung
-      When User choose television SAMSUNG 32
+      And  User click on "<hamburgerMenuItem>" on Hamburger Menu Item
+      Then User click on "<hamburgerListItem>" list item
+      And USer click on "<listItem>" list item
+      And User click on branch "<branch>"
+      When User choose television "<productPertama>"
       Then User click button Add to Cart
       When User click Hamburger Button All
-      And  User click on Electronics on Hamburger Menu Item
-      Then User click on Television and Video list item
-      And USer click on Television list item
-      And User click on branch Samsung
-      When User choose television SAMSUNG M5
+      And  User click on "<hamburgerMenuItem>" on Hamburger Menu Item
+      Then User click on "<hamburgerListItem>" list item
+      And USer click on "<listItem>" list item
+      And User click on branch "<branchKedua>"
+      When User choose one more television "<productKedua>"
       Then User click button Add to Cart
       And User click on Button Cart
-      And User Delete one product
+      And User Delete one product "<deleteProduct>"
       And User click On button Process to Checkout
-      When User input username "Abogoboga"
+      When User input username "<UserName>"
       And User click on Button continue
-      Then Appear error message "We cannot find an account with that email address"
+      Then Appear error message "<ErrorMessage>"
+
+    Examples:
+      | hamburgerMenuItem | hamburgerListItem  | listItem    | branch  | productPertama                                                                       | branchKedua | productKedua                                                                                                                                                                                 | deleteProduct                                                                        | UserName  | ErrorMessage                                      |
+      | Electronics       | Television & Video | Televisions | SAMSUNG | SAMSUNG 32-inch Class The Frame Customizable Bezel - White (SCFT32WT/ZA, 2020 Model) | SAMSUNG     | SAMSUNG M5 Series 32-Inch FHD 1080p Smart Monitor & Streaming TV (Tuner-Free), Netflix, HBO, Prime Video, & More, Apple Airplay, Height Adjustable Stand, Built-in Speakers (LS32AM502HNXZA) | SAMSUNG 32-inch Class The Frame Customizable Bezel - White (SCFT32WT/ZA, 2020 Model) | Abogobofa | We cannot find an account with that email address |
