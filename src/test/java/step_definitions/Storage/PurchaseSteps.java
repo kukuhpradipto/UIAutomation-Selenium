@@ -1,6 +1,8 @@
 package step_definitions.Storage;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageObject.Television.CheckOutPage;
@@ -58,4 +60,29 @@ public class PurchaseSteps {
         Thread.sleep(1000);
     }
 
+    @Given("^User open website Amazon and already landing page$")
+    public void userOpenWebsiteAmazonAndAlreadyLandingPage() {
+    }
+
+    @When("^User click All main menu$")
+    public void userClickAllMainMenu() {
+    }
+
+    @And("^User click list menu Computers in shop by departement$")
+    public void userClickListMenuComputersInShopByDepartement() {
+    }
+
+    @And("^User click list menu Storage Data$")
+    public void userClickListMenuStorageData() {
+    }
+
+    @And("^User sort list product Storage Data by featured brands seagate$")
+    public void userSortListProductStorageDataByFeaturedBrandsSeagate() {
+    }
+
+    @And("^User choice product from Storage Data \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userChoiceProductFromStorageDataAnd(String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }
