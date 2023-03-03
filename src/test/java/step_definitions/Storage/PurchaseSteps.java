@@ -1,12 +1,9 @@
 package step_definitions.Storage;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pageObject.PET.LoginPage;
-import pageObject.Television.CheckOutPage;
 import pageObject.Storage.StorageFeature;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -91,6 +88,12 @@ public class PurchaseSteps {
     public void userClickButtonProccedToCheckout() throws InterruptedException {
         StorageFeature storageFeature = new StorageFeature(webDriver);
         storageFeature.setButtonProccedToCheckout();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
+    }
+
+    @Then("User is directed to the login page and must login for the next process")
+    public void userIsDirectedToTheLoginPageAndMustLoginForTheNextProcess() {
+        StorageFeature storageFeature = new StorageFeature(webDriver);
+        storageFeature.amazonLoginPage();
     }
 }
