@@ -57,4 +57,22 @@ public class PurchaseSteps {
         Thread.sleep(1000);
 
     }
+
+    @And("User choice to cart product random from Storage Data")
+    public void userChoiceProductFromStorageDataAnd() throws Throwable {
+        WebElement a = webDriver.findElement(By.xpath("//span[text()='Seagate FireCuda 530 1TB Solid State Drive - M.2 PCIe Gen4 Ã—4 NVMe 1.4, PS5 Internal SSD, speeds up to 7300MB/s, 3D TLC NAND, 1275 TBW, 1.8M MTBF, Heatsink, Rescue Services (ZP1000GM3A023)']"));
+        a.click();
+        Thread.sleep(1000);
+        StorageFeature storageFeature = new StorageFeature(webDriver);
+        storageFeature.setAddCart();
+        Thread.sleep(1000);
+        webDriver.navigate().back();
+        Thread.sleep(1000);
+        webDriver.navigate().back();
+        WebElement c = webDriver.findElement(By.xpath("//span[text()='Seagate Exos X16 14TB 7200 RPM SATA 6Gb/s 256MB Cache 3.5-Inch Internal Data Center HDD Enterprise Hard Drive (ST14000NM001G)']"));
+        c.click();
+        storageFeature.setAddCart();
+
+
+    }
 }
