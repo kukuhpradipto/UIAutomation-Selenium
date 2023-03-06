@@ -11,5 +11,8 @@
         <module name="InstagramAutomation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Amazon-AutomationTesting" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

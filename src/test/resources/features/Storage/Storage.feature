@@ -1,7 +1,7 @@
 Feature: Completed order
   As a user I want buy storage data without login
 
-  @Complete
+  @Team @Storage
   Scenario: user buy product data storage
     Given User open website Amazon and already landing page
     When User click All main menu
