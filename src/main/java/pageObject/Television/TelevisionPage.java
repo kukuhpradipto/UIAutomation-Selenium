@@ -22,7 +22,6 @@ public class TelevisionPage {
         return true;
     }
 
-
     @FindBy(xpath = "//i[@class='hm-icon nav-sprite']")
     private WebElement hamburgerMenuButton;
     public void setHamburgerMenuButton(){
