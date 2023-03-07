@@ -91,7 +91,7 @@ public class TelevisionStepdefs {
         Thread.sleep(1000);
     }
 
-    @And("User click on Button Cart")
+    @And("User click Button Cart")
     public void userClickCart() throws InterruptedException {
         WebElement a;
         a = new WebDriverWait(webDriver, 5).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='attach-sidesheet-view-cart-button']//input[@class='a-button-input']")));
@@ -106,8 +106,8 @@ public class TelevisionStepdefs {
         Thread.sleep(1000);
     }
 
-    @And("User click On button Process to Checkout")
-    public void userClickOnButtonProcessToCheckout() throws InterruptedException {
+    @And("User click button Process to Checkout")
+    public void userClickButtonProcessToCheckout() throws InterruptedException {
         TelevisionPage televisionPage = new TelevisionPage(webDriver);
         televisionPage.setButtonProccesToCheckout();
         Thread.sleep(1000);

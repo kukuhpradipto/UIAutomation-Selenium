@@ -39,13 +39,13 @@ public class PETpage {
         hamburgerListItem.click();
     }
     // The First Product
-    @FindBy(xpath = "//*[@id=\"acs-product-block-0\"]")
+    @FindBy(xpath = "//span[@class='a-truncate-cut']")
     private WebElement firstProduct;
     public void setFirstProduct(){
         firstProduct.click();
     }
     // Add to Cart
-    @FindBy(xpath = "//input[@id='add-to-cart-button']")
+    @FindBy(xpath = "//span[@class='a-button a-button-primary a-button-small simplebundle-abb-atc-button']//input[@class='a-button-input']")
     private WebElement addToCart;
     public void setAddToCart(){
         addToCart.click();

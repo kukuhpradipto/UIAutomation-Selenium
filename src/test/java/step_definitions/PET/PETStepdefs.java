@@ -53,7 +53,7 @@ public class PETStepdefs {
         Thread.sleep(4000);
     }
 
-    @Then("User click button add to cart")
+    @Then("User click on button add to cart")
     public void userClickButtonAddToCart() throws InterruptedException {
         PETpage petPage = new PETpage(webDriver);
         petPage.setAddToCart();
@@ -68,7 +68,7 @@ public class PETStepdefs {
     }
 
     @And("User click on Button Cart")
-    public void userClickOnButtonCart() {
+    public void userButtonCart() {
         WebElement a;
         a = new WebDriverWait(webDriver,5).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='attach-sidesheet-view-cart-button']//input[@class='a-button-input']")));
         a.click();

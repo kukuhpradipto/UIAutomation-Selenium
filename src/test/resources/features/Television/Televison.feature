@@ -27,9 +27,9 @@
       And User click on branch "<branchKedua>"
       When User choose one more television "<productKedua>"
       Then User click button Add to Cart
-      And User click on Button Cart
+      And User click Button Cart
       And User Delete one product "<deleteProduct>"
-      And User click On button Process to Checkout
+      And User click button Process to Checkout
       When User input username "<UserName>"
       And User click on Button continue
       Then Appear error message "<ErrorMessage>"
