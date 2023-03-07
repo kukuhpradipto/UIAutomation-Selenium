@@ -69,7 +69,7 @@ public class TelevisionStepdefs {
     public void UserChooseTelevesionPertama(String productPertama) throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,1300)", "");
+        js.executeScript("window.scrollBy(0,1000)", "");
         Thread.sleep(1000);
         WebElement a = webDriver.findElement(By.xpath("//span[text()='"+productPertama+"']"));
         a.click();
@@ -101,7 +101,7 @@ public class TelevisionStepdefs {
 
     @And("User Delete one product \"(.*)\"")
     public void userDeleteOneProduct(String deleteProduct) throws InterruptedException {
-        WebElement a = webDriver.findElement(By.cssSelector("[aria-label='Delete "+deleteProduct+"']"));
+        WebElement a = webDriver.findElement(By.xpath("//input[@value='Delete']"));
         a.click();
         Thread.sleep(1000);
     }
@@ -127,8 +127,8 @@ public class TelevisionStepdefs {
         Thread.sleep(1000);
     }
 
-    @Then("Appear error message \"(.*)\"")
-    public void appearErrorMessage(String error) throws InterruptedException {
+    @Then("Appear error to message \"(.*)\"")
+    public void appearErrorToMessage(String error) throws InterruptedException {
         TelevisionPage televisionPage = new TelevisionPage(webDriver);
         Assert.assertEquals(error, televisionPage.setErrorMessage());
         Thread.sleep(1000);

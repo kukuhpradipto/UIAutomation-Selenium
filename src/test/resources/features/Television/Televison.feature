@@ -28,12 +28,12 @@
       When User choose one more television "<productKedua>"
       Then User click button Add to Cart
       And User click Button Cart
-      And User Delete one product "<deleteProduct>"
+      And User Delete one product
       And User click button Process to Checkout
       When User input username "<UserName>"
       And User click on Button continue
-      Then Appear error message "<ErrorMessage>"
+      Then Appear error to message "<ErrorMessage>"
 
     Examples:
-      | hamburgerMenuItem | hamburgerListItem  | listItem    | branch  | productPertama                                                                          | branchKedua | productKedua                                                                                                                                                                                 | deleteProduct                                                                           | UserName  | ErrorMessage                                      |
-      | Electronics       | Television & Video | Televisions | SAMSUNG | SAMSUNG 32-inch Class The Frame Customizable Bezel - Beige (VG-SCFT32BE/ZA, 2020 Model) | SAMSUNG     | SAMSUNG M5 Series 32-Inch FHD 1080p Smart Monitor & Streaming TV (Tuner-Free), Netflix, HBO, Prime Video, & More, Apple Airplay, Height Adjustable Stand, Built-in Speakers (LS32AM502HNXZA) | SAMSUNG 32-inch Class The Frame Customizable Bezel - Beige (VG-SCFT32BE/ZA, 2020 Model) | Abogobofa | We cannot find an account with that email address |
+      | hamburgerMenuItem | hamburgerListItem  | listItem    | branch  | productPertama                                                                          | branchKedua | productKedua                                                                                                                                                                                 | UserName  | ErrorMessage                                      |
+      | Electronics       | Television & Video | Televisions | SAMSUNG | SAMSUNG 32-inch Class The Frame Customizable Bezel - Beige (VG-SCFT32BE/ZA, 2020 Model) | SAMSUNG     | SAMSUNG M5 Series 32-Inch FHD 1080p Smart Monitor & Streaming TV (Tuner-Free), Netflix, HBO, Prime Video, & More, Apple Airplay, Height Adjustable Stand, Built-in Speakers (LS32AM502HNXZA) | Abogobofa | We cannot find an account with that email address |
