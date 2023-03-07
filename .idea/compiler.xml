@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FacebookAutomation" />
-        <module name="Amazon-AutomationTesting" />
+        <module name="Amazon-WEBTesting-BDDSelenium" />
         <module name="InstagramAutomation" />
+        <module name="Amazon-AutomationTesting" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Amazon-AutomationTesting" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
