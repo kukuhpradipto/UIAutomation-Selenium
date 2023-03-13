@@ -10,7 +10,7 @@
 #    As a User, I want to click button Check out Amazon Cart, So that appear sign in
 #    As I User, I want to input random username, So that appear error message
 
-    @Television @Team
+    @Television
     Scenario Outline: Purchase using the Amazon web in Hamburger Button All Feature Electronics to sub menu Television & Video
       Given User already on Home page website amazon
       When User click Hamburger Button All
